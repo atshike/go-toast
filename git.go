@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	path = "F:\\webhooks"
+	path = "F:\\go\\go-toast"
 )
 
 func main() {
