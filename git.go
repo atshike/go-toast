@@ -15,6 +15,7 @@ func main() {
 	fmt.Print(hook)
 
 	http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
+		fmt.Print("doing...")
 		payload, err := hook.Parse(r, github.ReleaseEvent, github.PullRequestEvent)
 		fmt.Print(payload)
 
