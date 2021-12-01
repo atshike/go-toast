@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-func main() {
+func mains() {
 	notification := toast.Notification{
 		AppID:   "Microsoft.Windows.Shell.RunDialog",
 		Title:   "写日报",
