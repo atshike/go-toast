@@ -17,11 +17,13 @@ func main() {
 	http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
 		payload, err := hook.Parse(r, github.ReleaseEvent, github.PullRequestEvent)
 		fmt.Print(payload)
+
 		if err != nil {
 			if err == github.ErrEventNotFound {
 				// ok event wasn;t one of the ones asked to be parsed
 			}
 		}
+
 		switch payload.(type) {
 		case github.ReleasePayload:
 			release := payload.(github.ReleasePayload)
